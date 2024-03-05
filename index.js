@@ -7,11 +7,11 @@ const app = express();
 const port = 3000;
 
 const dbPool = new pg.Pool({
-  user: "postgres",
-  database: "quizapplicationyt",
+  user: process.env.user_var,
+  database: process.env.database_var,
   port: 5432,
-  host: "localhost",
-  password: "rishab123",
+  host: process.env.host_var,
+  password: process.env.password_var,
 });
 
 app.use(express.json());
